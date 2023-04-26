@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-from dj_database_url import parse
+from dj_database_url import parse as dburl
+from decouple import config
 
 
 load_dotenv()
@@ -89,7 +90,7 @@ WSGI_APPLICATION = 'megapay.wsgi.application'
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
-DATABASE = {'default': config('DATABASE_URL', default=default_dburl, cast=parse)}
+DATABASES = {'default': config('DATABASE_URL', default=default_dburl, cast=dburl)}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
