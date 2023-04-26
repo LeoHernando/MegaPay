@@ -16,9 +16,6 @@ __pycache__/
 # Ignore local development settings
 local_settings.py
 
-# Ignore static and media files
-staticfiles/
-media/
 
 # Ignore editor and IDE files
 .vscode/
