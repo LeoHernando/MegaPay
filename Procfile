@@ -1,0 +1,1 @@
+web: gunicorn megapay.wsgi --log-file -
