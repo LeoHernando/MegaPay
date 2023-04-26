@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'megapay.wsgi.application'
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
-DATABASES = {'default': config('DATABASE_URL', default=default_dburl, cast=dburl)}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL', default=default_dburl))}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
