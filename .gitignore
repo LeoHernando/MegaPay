@@ -1,5 +1,4 @@
 # Ignore database files
-*.db
 *.sqlite3
 
 # Ignore logs
