@@ -15,6 +15,8 @@ import os
 from dotenv import load_dotenv
 from dj_database_url import parse as dburl
 from decouple import config
+import dj_database_url
+
 
 
 load_dotenv()
